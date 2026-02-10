@@ -30,7 +30,8 @@ An ESPHome external component that:
 
 ## 📦 Install / Use
 
-1. Place the file contents into your ESPHome folder in Home Assistant (I used Samba Share to access directory)
+1. Place (extract) the file contents directly into your ESPHome folder in Home Assistant (I used Samba Share to access directory)
+  - [download zip](https://github.com/joshstx/projector-esp-rs232/archive/refs/heads/main.zip)
 2. Open ESPHome Web UI in the ESPHome App (previously know as Add-Ons)
 3. Assemble and add the ESP32 device into ESPHome (add firmware or whatever to get it in as new device, you'll write over anything when installing)
 4. If you do not already have a `secrets.yaml` file:
