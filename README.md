@@ -8,6 +8,14 @@ An ESPHome external component that:
   (no HA template switch required)
 
 ---
+## 🔌 Hardware
+
+| I Used | Notes |
+|----------------|-------|
+| ESP-WROOM-32   | ESP Board with wifi |
+| MAX232CSE      | RS-232 Serial interface  |
+
+
 
 ## 🔌 Wiring
 
