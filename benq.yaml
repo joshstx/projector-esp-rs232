@@ -1,0 +1,57 @@
+esphome:
+  name: benq-projector
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Load our external RS232 component
+external_components:
+  - source:
+      type: local
+      path: ext
+    components:
+      - benq_rs232
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+logger:
+
+api:
+
+ota:
+  - platform: esphome
+
+# UART to MAX3232
+uart:
+  id: pj_uart
+  tx_pin: GPIO17
+  rx_pin: GPIO16
+  baud_rate: 9600
+  data_bits: 8
+  parity: NONE
+  stop_bits: 1
+  rx_buffer_size: 256
+
+# BenQ RS232 state reader + parser
+benq_rs232:
+  id: benq
+  uart_id: pj_uart
+  update_interval: 10s
+
+  raw:
+    name: Projector Reply
+
+  power_state:
+    name: Projector Power State
+
+# Native HA switch entity (no Home Assistant template needed)
+switch:
+  - platform: benq_rs232
+    name: Projector Power
+    icon: mdi:projector
+    benq_rs232_id: benq
+    optimistic: true
