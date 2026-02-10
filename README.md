@@ -1,4 +1,4 @@
-# BenQ Projector RS-232 (ESPHome External Component)
+# BenQ Projector RS-232 (ESPHome for Home Assistant)
 
 An ESPHome external component that:
 
