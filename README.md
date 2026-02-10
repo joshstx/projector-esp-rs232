@@ -21,8 +21,8 @@ An ESPHome external component that:
 
 | RS232 Converter | ESP32 |
 |----------------|-------|
-| TX             | TX    |
-| RX             | RX    |
+| TX             | GIOP 17 TX2 |
+| RX             | GIOP 16 RX2 |
 | GND            | GND   |
 | VCC            | 3.3V / 5V |
 
